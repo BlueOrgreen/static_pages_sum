@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瀑布流</title>
+    <style>
+        body {
+            background: #dedede;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+        }
+        .container > .item{
+            flex: 1;
+            margin: 17px;
+        }
+        .container > .item > img{
+            width: 100%;
+            border: 10px solid white;
+            margin-top: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        .container > .item > img:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0px 3px 2px 1px #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="pubu-01"></div>
+        <div class="item" id="pubu-02"></div>
+        <div class="item" id="pubu-03"></div>
+        <div class="item" id="pubu-04"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

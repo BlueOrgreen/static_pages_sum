@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IOS开关按钮</title>
+    <link rel="stylesheet" href="ios.css">
+  </head>
+  <body>
+    <label for="toggle">
+      <!-- 这里利用事件冒泡的原理
+    即点击 span 子元素会冒泡触发父元素 label 的事件
+    且 label 又关联了 checkbox 复选框，所以点击
+    圆形按钮（span）即点击了复选框 -->
+      <input type="checkbox" id="toggle">
+      <span></span>
+    </label>
+  </body>
+</html>

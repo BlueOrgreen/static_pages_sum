@@ -1,0 +1,43 @@
+body {
+  background: url('new.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#login-box {
+    /* outline: 2px solid red; */
+    margin: 0 auto;
+    margin-top: 12%;
+    text-align: center;
+    background: #00000050;  /*颜色后面加数字表示百分比*/
+    padding: 20px 50px;
+}
+
+/* #login-box .form {
+    margin-top: 50px;
+} */
+
+#login-box .form .item {
+    margin-top: 13px;
+}
+
+#login-box .form .item input {
+    width: 180px;
+    font-size: 28px;
+    border: 0;
+    border-bottom: 3px solid #000;
+    padding: 10px 10px;
+    background: #ffffff00; /*任意颜色+00 都成为透明*/
+    color: #fff;   /*字体设为白色*/
+}
+
+#login-box button {
+    margin-top: 20px;
+    width: 180px;
+    height: 45px;
+}
+
+#login-box .form .item i {
+    font-size: 18px;
+}

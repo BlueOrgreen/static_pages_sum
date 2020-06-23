@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="images">
+        <img src="Img/1.jpg">
+        <img src="Img/2.jpg">
+        <img src="Img/3.jpg">
+        <img src="Img/4.jpg">
+        <img src="Img/5.jpg">
+      </div>
+      <!-- fa fa-angle-left / right -->
+      <div onclick="side_slide(-1)" class="slide left">
+        <span class="fa fa-angle-left"></span>
+      </div>
+      <div onclick="side_slide(1)" class="slide right">
+        <span class="fa fa-angle-right"></span>
+      </div>
+
+      <div class="btm-sliders">
+        <span onclick="btm_slide(1)"></span>
+        <span onclick="btm_slide(2)"></span>
+        <span onclick="btm_slide(3)"></span>
+        <span onclick="btm_slide(4)"></span>
+        <span onclick="btm_slide(5)"></span>
+      </div>
+    </div>
+
+    <script>
+      var indexValue = 1
+      showImg(indexValue)
+      function btm_slide(e){showImg(indexValue = e)}
+      function side_slide(e){showImg(indexValue += e)}
+      function showImg(e) {
+        var i
+        var img = document.querySelectorAll('img')
+        var sliders = document.querySelectorAll('.btm-sliders span')
+        if (e > img.length){indexValue = 1}
+        if(e < 1)(indexValue = img.length)
+        for (i = 0; i < img.length; i++) {
+          img[i].style.display = "none"
+        }
+        for (i = 0; i < img.length; i++) {
+          sliders[i].style.background = "rgba(255,255,255,0.1)"
+        }
+        img[indexValue-1].style.display = "block"
+        sliders[indexValue-1].style.background = "white"
+      }
+
+    </script>
+
+  </body>
+</html>

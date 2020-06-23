@@ -1,0 +1,58 @@
+body {
+    background: url("../Img/new.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+#login-box {
+    width: 30%;
+    height: auto;
+    /* outline: 2px solid red; */
+    margin: 0 auto;
+    margin-top: 12%;
+    text-align: center;
+    background: #00000080;  /*颜色后面加数字表示百分比*/
+    padding: 20px 50px;
+}
+
+/* #login-box .form {
+    margin-top: 50px;
+} */
+
+h1 {
+    color: #fff;
+}
+
+#login-box .form .item {
+    
+    margin-top: 13px;
+}
+
+#login-box .form .item input {
+    width: 180px;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 3px solid #000;
+    padding: 10px 10px;
+    background: #ffffff00; /*任意颜色+00 都成为透明*/
+    color: #fff;   /*字体设为白色*/
+}
+
+#login-box button {
+    margin-top: 20px;
+    width: 160px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    border: 0;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #db3125 0%, #578bc3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+ background-blend-mode: normal, lighten, soft-light;
+}
+
+#login-box .form .item i {
+    font-size: 20px;
+    color: #fff;
+}
+

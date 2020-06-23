@@ -1,0 +1,105 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.slidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all 0.5s ease;
+}      /* 1.all？ */
+
+.slidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background-color: #063146;
+  user-select: none;
+}
+
+.slidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 18px;
+  color: white;
+  /* text-align: center; */
+  padding-left: 40px;
+  box-sizing: border-box;  /* 疑问2 */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.3s;
+}
+
+.slidebar li:hover a {
+  padding-left: 50px;
+}
+
+.slidebar ul li i {
+  margin-right: 16px;
+}
+
+#check {
+  display: none;
+}
+
+label #btn,label #cancel {
+  position: absolute;
+  cursor: pointer;
+  background: #042331;
+  border-radius: 3px;
+}
+
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all 0.5s;
+}
+
+label #cancel {
+  z-index: 1000;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all 0.5s ease;
+}
+
+#check:checked ~ .slidebar {
+  left: 0;
+}
+
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+#check:checked ~ label #cancel {
+  left: 195px;
+
+}
+
+.section {
+  /* 设置图片与屏幕大小一样大小 */
+  background: url('1.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
